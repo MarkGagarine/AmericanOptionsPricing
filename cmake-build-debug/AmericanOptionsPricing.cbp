@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="AmericanOptionsPricing"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AmericanOptionsPricing">
+				<Option output="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/AmericanOptionsPricing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 AmericanOptionsPricing"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AmericanOptionsPricing/fast">
+				<Option output="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/AmericanOptionsPricing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 AmericanOptionsPricing/fast"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/markgagarine/CLionProjects/AmericanOptionsPricing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/Option.cpp">
+			<Option target="AmericanOptionsPricing"/>
+		</Unit>
+		<Unit filename="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/Option.h">
+			<Option target="AmericanOptionsPricing"/>
+		</Unit>
+		<Unit filename="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/Price_American_PSOR.cpp">
+			<Option target="AmericanOptionsPricing"/>
+		</Unit>
+		<Unit filename="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/Price_American_PSOR.h">
+			<Option target="AmericanOptionsPricing"/>
+		</Unit>
+		<Unit filename="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/Stock.cpp">
+			<Option target="AmericanOptionsPricing"/>
+		</Unit>
+		<Unit filename="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/Stock.h">
+			<Option target="AmericanOptionsPricing"/>
+		</Unit>
+		<Unit filename="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/main.cpp">
+			<Option target="AmericanOptionsPricing"/>
+		</Unit>
+		<Unit filename="/Users/markgagarine/CLionProjects/AmericanOptionsPricing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

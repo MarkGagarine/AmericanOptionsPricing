@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/markgagarine/CLionProjects/AmericanOptionsPricing/Option.cpp
+Option.h
+/Users/markgagarine/CLionProjects/AmericanOptionsPricing/Option.h
+Price_American_PSOR.h
+/Users/markgagarine/CLionProjects/AmericanOptionsPricing/Price_American_PSOR.h
+
+/Users/markgagarine/CLionProjects/AmericanOptionsPricing/Option.h
+string
+-
+vector
+-
+algorithm
+-
+cmath
+-
+iostream
+-
+
+/Users/markgagarine/CLionProjects/AmericanOptionsPricing/Price_American_PSOR.h
+Eigen/Eigen
+-
+cmath
+-
+algorithm
+-
+
