@@ -7,20 +7,15 @@
 
 using namespace std;
 
-Option::Option(const string& sym, const double stockPr, const double DTE, const double vol)
+Option::Option(const string& sym, const double stockPr, const double DTE, const double vol, bool computeGreeks = false)
     : symbol(sym), stock_price(stockPr), days_to_exp(DTE), volatility(vol){
     // Constructor initialization list is used to initialize const members
     setStrikeChain();
     setCallChain();
     setPutChain();
-    vector<double> currChain = getStrikeChain();
-    vector<double> currCalls = getCallChain();
-    vector<double> currPuts = getPutChain();
-
-    vector<vector<double>> straddle = getOptionChain();
-    cout << "Call Strike Put\n";
-    for(const auto& i: straddle){
-        cout << i[0] << " " << i[1] << " " << i[2] << "\n";
+    if(computeGreeks){
+        setDelta();
+        setGamma();
     }
 }
 
@@ -41,7 +36,6 @@ vector<vector<double>> Option::getOptionChain() const{
         straddleAtK.push_back(put_price);
         straddleAtK.push_back(strike);
         straddleAtK.push_back(call_price);
-
         // Add the straddle vector to the straddle_chain
         straddleChain.push_back(straddleAtK);
     }
@@ -131,4 +125,71 @@ void Option::setCallChain(){
 
 void Option::setPutChain(){
     for(auto K: getStrikeChain()) addPut(priceAmericanPSOR(stock_price, days_to_exp, volatility, K, 0.05, 0));
+}
+
+double Option::getCallAtStrike(double strike) const {
+    for(int i = 0; i < strikeChain.size(); i++){
+        if (strikeChain[i] == strike){
+            return callChain[i];
+        }
+    }
+    cout << "Strike " << strike << " not in list\n";
+    return -1;
+}
+double Option::getPutAtStrike(double strike) const {
+    for(int i = 0; i < strikeChain.size(); i++){
+        if (strikeChain[i] == strike){
+            return putChain[i];
+        }
+    }
+    cout << "Strike " << strike << " not in list\n";
+    return -1;
+}
+
+/**
+ * Computes and returns vector with respective delta of option chain (call, put)
+ */
+void Option::setDelta() {
+    // Compute
+    double epsilon = pow(10, -2);
+    double dS = stock_price + epsilon;
+    Option dO = Option(symbol, dS, days_to_exp, volatility);
+    // result vector
+    vector<double> dC = dO.getCallChain();
+    vector<double> dP = dO.getPutChain();
+    for(int i = 0; i < strikeChain.size(); i++){
+        double callDelta = (dC[i] - callChain[i]) / dS;
+        double putDelta = (dP[i] - putChain[i]) / dS;
+        vector<double> currDelta = {callDelta, putDelta};
+        delta.push_back(currDelta);
+    }
+}
+
+/**
+ * Computes and returns vector with respective gamma of option chain (call, put)
+ * Requires: delta vector must be already calculated
+ */
+void Option::setGamma() {
+    // Compute
+    double epsilon = pow(10, -2);
+    double dS = stock_price - epsilon;
+    Option dO = Option(symbol, dS, days_to_exp, volatility);
+    // result vector
+    vector<double> dC = dO.getCallChain();
+    vector<double> dP = dO.getPutChain();
+    for(int i = 0; i < strikeChain.size(); i++){
+        vector<double> currDelta = delta[i];
+        double callGamma = (((dC[i] + callChain[i]) / dS) + currDelta[0]) / dS;
+        double putGamma = (((dP[i] - putChain[i]) / dS) + currDelta[1]) / dS;
+        vector<double> currGamma = {callGamma, putGamma};
+        gamma.push_back(currGamma);
+    }
+}
+
+vector<std::vector<double>> &Option::getDelta() {
+    return delta;
+}
+
+vector<std::vector<double>> &Option::getGamma() {
+    return delta;
 }

@@ -13,16 +13,18 @@
 class Option {
 public:
     // Constructor
-    Option(const std::string& sym, const double stockPr, const double DTE, const double vol);
+    Option(const std::string& sym, const double stockPr, const double DTE, const double vol, bool computeGreeks);
 
     // Getters
     std::string getSymbol() const;
     double getStockPrice() const;
     double getDTE() const;
     double getVolatility() const;
-    std::vector<std::vector<double>> getOptionChain() const;     // Return entire option chain as Straddle
+    std::vector<std::vector<double>> getOptionChain() const;      // Return entire option chain as Straddle
     double getCallAtStrike(double strike) const;                  // Return call at specific strike
     double getPutAtStrike(double strike) const;                   // Return put at specific strike
+    std::vector<std::vector<double>>& getDelta();
+    std::vector<std::vector<double>>& getGamma();
 
 private:
     const std::string symbol;
@@ -45,13 +47,12 @@ private:
     std::vector<double>& getCallChain();
     std::vector<double>& getPutChain();
 
-    // Methods to compute option Greeks (to be implemented later)
+    // Option Greeks calculations
+    std::vector<std::vector<double>> delta;
+    std::vector<std::vector<double>> gamma;
+    void setDelta();
+    void setGamma();
 
-    // float calculateDelta();
-    // float calculateGamma();
-
-    // ...
 };
-
 
 #endif //AMERICANOPTIONSPRICING_OPTION_H
